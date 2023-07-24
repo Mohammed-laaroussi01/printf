@@ -1,3 +1,5 @@
+#include <stdarg.h>
+#include <unistd.h>
 #include "main.h"
 /**
  * _printf - is a function that selects the correct function to print.
@@ -21,9 +23,8 @@ int _printf(const char * const format, ...)
 	va_start(args, format);
 	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
 		return (-1);
-here:
 
-
+Here:
 	while (format[i] != '\0')
 	{
 		j = 13;
